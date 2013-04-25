@@ -24,19 +24,11 @@ feature 'Visitor creates UserRegistration' do
     end
   end
 
-  def t(key, *options)
-    I18n.t(key, *options)
-  end
-
   def fill_in_sign_up_form
     user = FactoryGirl.build(:user)
     fill_in 'user_email', with: user.email
     fill_in 'user_password', with: 'password'
     fill_in 'user_password_confirmation', with: 'password'
-  end
-
-  def submit_form
-    find('input[type="submit"]').click
   end
 
   def should_see_message_visitor_created_user

@@ -1,0 +1,9 @@
+UPCOMING STORIES
+
+user signs in
+user writes a draft of a post    - spec/features/user_creates_post_spec.rb
+user publishes a post            - spec/features/user_publishes_post_spec.rb
+user views a list of their posts - spec/features/user_browses_posts_spec.rb
+user reads a post                - spec/features/user_views_post_spec.rb
+
+
