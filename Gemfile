@@ -3,11 +3,14 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 
 gem 'sqlite3'
+gem 'haml'
+gem 'devise'
 
 group :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'launchy'
+  gem 'factory_girl_rails'
 end
 
 group :assets do
