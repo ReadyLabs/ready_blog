@@ -1,4 +1,6 @@
 en:
   visitors:
+    sessions:
+      new: 'Sign In'
     user_registrations:
       new:  'Sign Up'

@@ -2,7 +2,8 @@ require 'spec_helper'
 
 feature 'Visitor signs in' do
   scenario 'success' do
-    visit new_user_session_path 
+    visit root_path 
+    click_on t('visitors.sessions.new')
     fill_in_sign_in_form
     submit_form
 
