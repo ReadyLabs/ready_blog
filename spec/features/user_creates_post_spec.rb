@@ -1,5 +1,7 @@
 require 'spec_helper'
 
+POST_TITLE = 'My First Post'
+
 feature 'User creates Post' do
   scenario 'success' do
     visit root_path
@@ -8,11 +10,11 @@ feature 'User creates Post' do
     fill_in_new_post_form
     submit_form
     click_on 'My Posts'
-    page.should have_content('My First Post')
+    page.should have_content(POST_TITLE)
   end
 
   def fill_in_new_post_form
-    fill_in 'Title', with: 'My First Post'
+    fill_in 'Title', with: POST_TITLE
     fill_in 'Body', with: 'Lorem Ipsum so on and so forth'
   end
 
