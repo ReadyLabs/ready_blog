@@ -4,3 +4,5 @@ en:
       new: 'Sign In'
     user_registrations:
       new:  'Sign Up'
+  posts:
+    new: 'Create a New Post'
