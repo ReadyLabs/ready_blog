@@ -7,6 +7,8 @@ feature 'User creates Post' do
     click_on t('posts.new')
     fill_in_new_post_form
     submit_form
+    click_on 'My Posts'
+    page.should have_css('.post')
   end
 
   def fill_in_new_post_form

@@ -4,4 +4,8 @@ ReadyBlog::Application.routes.draw do
   root to: 'pages#landing'
 
   resources :posts
+
+  resources :users do
+    resources :posts
+  end
 end
