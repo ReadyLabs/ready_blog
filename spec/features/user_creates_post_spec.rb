@@ -8,7 +8,7 @@ feature 'User creates Post' do
     fill_in_new_post_form
     submit_form
     click_on 'My Posts'
-    page.should have_css('.post')
+    page.should have_content('My First Post')
   end
 
   def fill_in_new_post_form
