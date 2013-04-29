@@ -11,8 +11,16 @@ class PostsController < ApplicationController
       render action: 'new'
     end
   end
+
   def index
     @user = current_user
     @posts = @user.posts
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    @post.published = params[:published] == "1"
+    @post.save
+    redirect_to user_posts_path(current_user)
   end
 end

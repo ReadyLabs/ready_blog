@@ -8,3 +8,8 @@ def fill_in_sign_in_form(user = nil)
   fill_in 'user_password', with: user.password
 end
 
+def sign_in_as(user)
+  click_on t('visitors.sessions.new')
+  fill_in_sign_in_form(user)
+  submit_form
+end

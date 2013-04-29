@@ -6,3 +6,4 @@ en:
       new:  'Sign Up'
   posts:
     new: 'Create a New Post'
+    publish: 'Publish This Post'

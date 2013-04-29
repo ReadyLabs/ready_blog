@@ -17,10 +17,4 @@ feature 'User creates Post' do
     fill_in 'Title', with: POST_TITLE
     fill_in 'Body', with: 'Lorem Ipsum so on and so forth'
   end
-
-  def sign_in_as(user)
-    click_on t('visitors.sessions.new')
-    fill_in_sign_in_form(user)
-    submit_form
-  end
 end
