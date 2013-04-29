@@ -14,7 +14,7 @@ feature 'User creates Post' do
   end
 
   def fill_in_new_post_form
-    fill_in 'Title', with: POST_TITLE
+    fill_in t('posts.form_labels.title'), with: POST_TITLE
     fill_in 'Body', with: 'Lorem Ipsum so on and so forth'
   end
 end
