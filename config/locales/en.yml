@@ -7,5 +7,6 @@ en:
   posts:
     new: 'Create a New Post'
     publish: 'Publish This Post'
+    browse: 'My Posts'
     form_labels:
       title: 'Title'
