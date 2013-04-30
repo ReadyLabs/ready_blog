@@ -1,0 +1,8 @@
+.post_content
+  %h2 #{@post.title}
+  %p #{@post.body}
+.post_status
+  - if @post.published
+    %p This post is published
+  - else
+    = link_to('Publish This Post', post_path(@post, published: 1), method: :put, confirm: 'Are you sure?')
