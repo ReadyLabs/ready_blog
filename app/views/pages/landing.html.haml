@@ -1,6 +1,6 @@
 .header
   %p#title Ready Blog
-  - if current_user
+  - if user_signed_in?
     = link_to 'Sign Out', destroy_user_session_path, id: 'sign_out_link', method: 'delete'
 
 .center
