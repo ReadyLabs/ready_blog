@@ -1,5 +1,5 @@
 def submit_form
-  first('#sign_in_form').find('input[type="submit"]').click
+  find('input[type="submit"]').click
 end
 
 def fill_in_sign_in_form(user = nil)
@@ -9,7 +9,6 @@ def fill_in_sign_in_form(user = nil)
 end
 
 def sign_in_as(user)
-  # click_on t('visitors.sessions.new')
   fill_in_sign_in_form(user)
-  submit_form
+  first('#sign_in_form').find('input[type="submit"]').click
 end

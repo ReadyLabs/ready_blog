@@ -2,10 +2,8 @@ require 'spec_helper'
 
 feature 'Visitor signs in' do
   scenario 'success' do
-    visit root_path 
-    click_on t('visitors.sessions.new')
-    fill_in_sign_in_form
-    submit_form
+    visit root_path
+    sign_in_as(FactoryGirl.create(:user))
 
     should_see_message_visitor_signed_in
   end
