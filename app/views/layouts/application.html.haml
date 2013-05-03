@@ -10,12 +10,7 @@
     #page
       .header
         %p#title Ready Blog
-        - if user_signed_in?
-          = link_to 'Sign Out', destroy_user_session_path, id: 'sign_out_link', method: 'delete'
-
-        - if user_signed_in?
-          = link_to t('posts.new'), new_post_path
-          = link_to t('posts.browse'), user_posts_path(current_user)
+        = render 'shared/site_nav'
 
 
       %p.notice= notice

@@ -11,3 +11,5 @@ en:
     view: 'View Post'
     form_labels:
       title: 'Title'
+  users:
+    index: 'View Blogs by User'

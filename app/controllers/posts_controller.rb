@@ -17,7 +17,7 @@ class PostsController < ApplicationController
   end
 
   def index
-    @user = current_user
+    @user = User.find(params[:user_id])
     @posts = @user.posts
   end
 

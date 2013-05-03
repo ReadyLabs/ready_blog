@@ -26,9 +26,13 @@ feature 'Visitor creates UserRegistration' do
 
   def fill_in_sign_up_form
     user = FactoryGirl.build(:user)
-    first('#sign_up_form').fill_in 'user_email', with: user.email
-    first('#sign_up_form').fill_in 'user_password', with: 'password'
-    first('#sign_up_form').fill_in 'user_password_confirmation', with: 'password'
+    within('#sign_up_form') do
+      fill_in 'user_first_name', with: 'Bob'
+      fill_in 'user_last_name', with: 'Barker'
+      fill_in 'user_email', with: user.email
+      fill_in 'user_password', with: 'password'
+      fill_in 'user_password_confirmation', with: 'password'
+    end
   end
 
   def should_see_message_visitor_created_user
