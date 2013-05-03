@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %title ReadyBlog
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+
+  %body
+    .header
+      %p#title Ready Blog
+      - if user_signed_in?
+        = link_to 'Sign Out', destroy_user_session_path, id: 'sign_out_link', method: 'delete'
+
+    %p.notice= notice
+    %p.alert= alert
+
+    .center
+      = yield
+
+    .footer

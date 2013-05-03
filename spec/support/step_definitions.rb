@@ -10,5 +10,9 @@ end
 
 def sign_in_as(user)
   fill_in_sign_in_form(user)
+  submit_sign_in_form
+end
+
+def submit_sign_in_form
   first('#sign_in_form').find('input[type="submit"]').click
 end
