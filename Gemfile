@@ -8,6 +8,11 @@ gem 'devise'
 gem 'simple_form'
 gem 'bourbon'
 
+group :development do
+  gem 'guard'
+  gem 'guard-livereload'
+end
+
 group :test do
   gem 'rspec-rails'
   gem 'capybara'
