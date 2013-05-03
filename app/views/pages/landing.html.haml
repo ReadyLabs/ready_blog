@@ -1,19 +1,21 @@
 .intro Welcome to ReadyBlog!
 
-.landing_forms
-  #sign_in_form
-    %h2 SIGN IN
-    = simple_form_for(:user, :url => new_user_session_path) do |f|
-      = f.input :email
-      = f.input :password
-      = f.button :submit, 'Sign In'
+  
+- if !user_signed_in?
+  .landing_forms
+    #sign_in_form
+      %h2 SIGN IN
+      = simple_form_for(:user, :url => new_user_session_path) do |f|
+        = f.input :email
+        = f.input :password
+        = f.button :submit, 'Sign In'
 
-    = link_to "Forgot your password?", new_user_password_path
+      = link_to "Forgot your password?", new_user_password_path
 
-  #sign_up_form
-    %h2 SIGN UP
-    = simple_form_for(User.new, :url => user_registration_path) do |f|
-      = f.input :email
-      = f.input :password
-      = f.input :password_confirmation
-      = f.button :submit, 'Sign Up'
+    #sign_up_form
+      %h2 SIGN UP
+      = simple_form_for(User.new, :url => user_registration_path) do |f|
+        = f.input :email
+        = f.input :password
+        = f.input :password_confirmation
+        = f.button :submit, 'Sign Up'
