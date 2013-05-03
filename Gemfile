@@ -6,6 +6,7 @@ gem 'sqlite3'
 gem 'haml'
 gem 'devise'
 gem 'simple_form'
+gem 'bourbon'
 
 group :test do
   gem 'rspec-rails'
