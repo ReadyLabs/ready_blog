@@ -15,10 +15,25 @@ body {
 .header {
   height: 100px;
   background-color: #FFB03F;
+  nav {
+    a {
+      display: block;
+      float: left;
+      width: 12em;
+      padding: 0.5em 1em;
+      text-align: center;
+      text-decoration: none;
+
+      &:hover {
+        background-color: white;
+      }
+    }
+  }
 }
 
 .center {
   height: 500px;
+  padding: 1em;
 }
 
 .footer {
@@ -33,7 +48,7 @@ body {
   margin-top: -40px;
 }
 
-#title {
+#logo {
   text-align: center;
   font-size: 50px;
   a {
@@ -41,22 +56,37 @@ body {
   }
 }
 
+
 form {
+  .input {
+    @include clearfix;
+    margin-top: 5px;
+  }
+
   label {
+    float: left;
     width: 90px;
     display: inline-block;
     margin-right: 1em;
   }
 
-  input[type="text"], input[type="email"], input[type="password"]{
-    width: 180px;
-    height: 30px;
-    font-size: 25px;
+  input, textarea {
+    float: left;
     border-radius: 0.3em;
-    margin: 5px;
-  }
+    font-size: 1.5em;
 
+    &[type="text"] {
+      width: 17em;
+      height: 1em;
+    }
+
+    &[type="email"], &[type="password"] {
+      width: 10em;
+        height: 1em;
+    }   
+  }
 }
+
 .landing_forms{
   width: 100%;
   margin: 100px auto;
