@@ -2,6 +2,10 @@
   margin: 0;
 }
 
+body {
+  font-family: Helvetica, sans-serif
+}
+
 #page {
   width: 1000px;
   margin: 30px auto;
@@ -32,6 +36,9 @@
 #title {
   text-align: center;
   font-size: 50px;
+  a {
+    text-decoration: none;
+  }
 }
 
 form {
