@@ -8,7 +8,7 @@ en:
     new: 'Create a New Post'
     publish: 'Publish This Post'
     browse: 'My Posts'
-    view: 'View Post'
+    show: 'View Post'
     form_labels:
       title: 'Title'
   users:
