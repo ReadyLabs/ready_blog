@@ -12,6 +12,12 @@
         #logo= link_to 'Ready Blog', root_path
         = render 'shared/site_nav'
 
+        - if user_signed_in?
+          = link_to 'Sign Out',
+            destroy_user_session_path,
+            id: 'sign_out_link',
+            method: 'delete'
+
 
       %p.notice= notice
       %p.alert= alert

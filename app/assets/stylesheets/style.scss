@@ -1,5 +1,12 @@
+$grey: #ccc;
+
 * {
   margin: 0;
+  border: none;
+}
+
+a {
+  color: rgb(55, 139, 160);
 }
 
 body {
@@ -14,7 +21,8 @@ body {
 
 .header {
   height: 100px;
-  background-color: #FFB03F;
+  background-color: rgb(187, 223, 195);
+  border-radius: 0.5em 0.5em 0 0;
   nav {
     a {
       display: block;
@@ -32,11 +40,12 @@ body {
 }
 
 .center {
-  height: 500px;
+  min-height: 500px;
   padding: 1em;
 }
 
 .footer {
+  display: block;
   height: 100px;
   background-color: #4C1628;
 }
@@ -71,10 +80,15 @@ form {
   }
 
   input, textarea {
+    border: solid $grey 1px;
     float: left;
     border-radius: 0.3em;
     font-size: 1.5em;
 
+    &[type="submit"]{
+      float: none;
+    }
+    
     &[type="text"] {
       width: 17em;
       height: 1em;
