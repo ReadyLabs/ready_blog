@@ -27,7 +27,7 @@ test:
 
 production:
   adapter: postgresql
-  encoding: unicode
+  username: postgres
+  password: postgres
+  host: 127.0.0.1
   database: ready_blog_production
-  pool: 5
-  password:
