@@ -13,7 +13,12 @@ module ReadyBlog
     config.active_support.escape_html_entities_in_json = true
 
     config.assets.enabled = true
-    config.assets.inialize_on_precompile = false
+    # config.assets.inialize_on_precompile = false
+
+    config.assets.precompile += ['application.css']
+    config.assets.precompile += ['style.css']
+    config.assets.precompile += ['application.js']
+
     config.assets.version = '1.0'
 
     config.encoding = "utf-8"
